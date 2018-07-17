@@ -3,16 +3,8 @@ defmodule Hydrus do
   Documentation for Hydrus.
   """
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Hydrus.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def track(params) do
+  	%{name: params[:name], properties: params[:properties]}
   end
+
 end
