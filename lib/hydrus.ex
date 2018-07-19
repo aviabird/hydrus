@@ -1,10 +1,10 @@
 defmodule Hydrus do
   @moduledoc """
-  Documentation for Hydrus.
+  APIs for Hydrus.
   """
+  alias Hydrus.EventHandler
 
-  def track(params) do
-  	%{name: params[:name], properties: params[:properties]}
-  end
-
+  defdelegate create(params), to: EventHandler
+  defdelegate get_details(user_id, name),
+    to: EventHandler, as: :get_user_event_details
 end
